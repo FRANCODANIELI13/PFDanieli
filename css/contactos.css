@@ -1,0 +1,119 @@
+/* reset */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(231, 205, 171);
+}
+
+/* estilos del encabezado*/
+
+header{
+    padding: 10px;
+    background-color: rgb(175, 139, 91);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*estilo del h1*/
+
+h1{
+    font-style: italic;  
+    font-size: 50px;  
+    color: whitesmoke;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+header nav ul li{
+    background-color: rgb(105, 102, 86);
+    padding: 10px;
+    border-radius: 40px;
+    text-shadow:2px 1px 2px black;
+}
+/*animacion de header*/
+header nav ul li:hover{
+    transform: scale(0.9)
+    rotate(360deg);
+    box-shadow: 3px 3px 6px grey;
+    transition: 3s;
+}
+
+header nav ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+/*estilo de main de index*/
+main{
+    margin-left:  40px;
+    display: inline;
+    inline-size: 20px;
+}
+
+main .texto-1{
+    width: 300px;
+    font-size: 20px;
+}
+
+main div h2{
+    font-size: 35px;
+}
+
+
+/*imagenes*/
+.img-6{
+    width: 350px;
+    border-radius: 400px;
+    place-content: center;
+    
+}
+
+/* estilos de footer*/
+
+footer{
+    text-align: start;
+}
+
+footer p{
+    font-size: 20px;
+    color: rgba(90, 82, 82, 0.952);
+}
+
+.ul-1{
+    font-style: italic;
+    font-size: 30px;
+}
+
+/*mq*/
+
+@media  (min-width: 360px) and (max-width:740px){
+    header{
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+    }
+    header nav ul{
+        list-style: none;
+        max-width: 360px;
+        overflow: scroll;
+    }
+    header nav ul li{
+        padding: 5px;
+    }
+    /*estilo de main*/
+
+    main{
+        margin: 1rem;
+        padding: 2rem;
+    }
+}
