@@ -1,0 +1,18 @@
+//mixin
+
+@mixin medidas( $alto, $ancho) {
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin estloimagenes {
+    
+    width: 300px;
+    border-radius: 400px;
+}
+
+@mixin estiloimagenes2 {
+    width: 300px;
+    border-radius: 400px;
+    align-self: center;
+}

@@ -1,150 +1,215 @@
-/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+.div-1, .footer-1, .main-contactos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto); }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+body {
+  background-color: #f5dab8; }
 
-body{
-    background-color: rgb(231, 205, 171);
-}
-
-/* estilos del encabezado*/
-
-header{
-    padding: 10px;
-    background-color: rgb(175, 139, 91);
+header {
+  padding: 10px;
+  background-color: #af8b5b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header h1 {
+    padding: 20px;
+    margin: 20px;
+    font-style: italic;
+    font-size: 50px;
+    color: whitesmoke; }
+  header nav div ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/*estilo del h1*/
-
-h1{
-    font-style: italic;  
-    font-size: 50px;  
-    color: whitesmoke;
-}
-
-header nav ul{
+    margin: 30px;
+    padding: 40px;
     list-style: none;
-    display: flex;
-    gap: 50px;
-}
+    gap: 50px; }
+    header nav div ul li {
+      background-color: #696656;
+      padding: 10px;
+      border-radius: 40px;
+      text-shadow: 2px 1px 2px black; }
+      header nav div ul li a {
+        color: whitesmoke;
+        text-decoration: none; }
 
-header nav ul li{
-    background-color: rgb(105, 102, 86);
-    padding: 10px;
-    border-radius: 40px;
-    text-shadow:2px 1px 2px black;
-}
-/*animacion de header*/
-header nav ul li:hover{
-    transform: scale(0.9)
-    rotate(360deg);
-    box-shadow: 3px 3px 6px grey;
-    transition: 3s;
-}
+main {
+  width: 250px;
+  height: 200px;
+  padding: 30px;
+  margin-left: 40px;
+  display: inline;
+  inline-size: 20px; }
+  main .texto-1 {
+    margin: 15px;
+    padding: 15px;
+    font-style: italic;
+    font-size: 20px; }
+    main .texto-1 h2 {
+      font-size: 35px; }
 
-header nav ul li a{
-    color: whitesmoke;
-    text-decoration: none;
-}
+.div-1 .img-1 {
+  grid-column: 2;
+  grid-row: 1;
+  width: 400PX;
+  height: 350px;
+  border-radius: 600px; }
 
-/*estilo de main de index*/
-main{
-    margin-left:  40px;
-    display: inline;
-    inline-size: 20px;
-}
-
-main .texto-1{
-    width: 300px;
+.footer-1 {
+  text-align: start; }
+  .footer-1 p {
+    margin: 20px;
     font-size: 20px;
-}
-
-main div h2{
-    font-size: 35px;
-}
-
-
-/*estilos de imagenes*/
-.img-1{
-    position: relative;
-    left: 800px;
-    bottom: 500px;
-    width: 400PX;
-    height: 350px;
-    border-radius: 600px;
-}
-
-.img-2{
-    position: relative;
-    bottom: 70px;
-    width: 200px;
+    color: rgba(90, 82, 82, 0.952); }
+  .footer-1 .img-2 {
+    grid-column: 3;
+    grid-row: 3;
     height: 150px;
-    border-radius: 400px;
-}
+    border-radius: 400px; }
 
-/* estilos de footer*/
+main h2 {
+  margin: 20px;
+  padding: 30px;
+  display: grid;
+  place-content: center;
+  font-style: italic;
+  text-align: center;
+  font-size: 40px; }
 
-footer{
-    text-align: start;
-}
-
-footer p{
-    font-size: 20px;
-    color: rgba(90, 82, 82, 0.952);
-}
-
-.ul-1{
+main .card {
+  text-align: center;
+  margin: 20px; }
+  main .card .img-3 {
+    width: 300px;
+    border-radius: 400px; }
+  main .card .img-4 {
+    width: 300px;
+    border-radius: 400px; }
+  main .card .img-5 {
+    width: 300px;
+    border-radius: 400px; }
+  main .card div p {
     font-style: italic;
     font-size: 30px;
-}
+    text-align: center; }
 
-/*mq*/
+main div .carousel-inner {
+  margin: 5px;
+  font-style: italic;
+  font-size: 27px;
+  display: grid;
+  place-content: center; }
+  main div .carousel-inner div .img-8 {
+    width: 300px;
+    border-radius: 400px;
+    align-self: center; }
+  main div .carousel-inner div .img-9 {
+    width: 300px;
+    border-radius: 400px;
+    align-self: center; }
+  main div .carousel-inner div .img-10 {
+    width: 300px;
+    border-radius: 400px;
+    align-self: center; }
 
-@media  (min-width: 360px) and (max-width:740px){
-    header{
-        max-width: 360px;
-        display: flex;
-        flex-direction: column;
-    }
-    header nav ul{
-        list-style: none;
-        max-width: 360px;
-        overflow: scroll;
-    }
-    header nav ul li{
-        padding: 5px;
-    }
-    /*estilo de main*/
+.main-contactos .img-6 {
+  padding: 0px;
+  grid-column: 43;
+  grid-row: 2;
+  padding: 20px;
+  width: 400px;
+  border-radius: 400px;
+  align-self: center; }
 
-    main{
-        margin: 1rem;
-        padding: 2rem;
-    }
-    .img-1{ 
-        position: relative;
-        right: 800px;
-        display: grid;
-        grid-column: 1;
-        grid-row: 2;
-        width: 200px;
-        height: 150px;
-    }
-    .footer-1 {
-       display: grid;
-       grid-template-columns: repeat(3, 1fr);
-       grid-gap: 10px;
-       grid-auto-rows: minmax(100px, auto);
-    }
+footer div .ul-1 {
+  list-style: none;
+  padding: 100px;
+  margin: 30px;
+  text-align: center; }
 
-    .img-2{
-        grid-column: 1;
-        grid-row: 5;
-    }
-}
+.main-nosotros .img-7 {
+  padding: 20px;
+  width: 300px;
+  border-radius: 500px; }
+
+footer .p-1 {
+  font-style: italic;
+  padding: 30px;
+  margin: 20px;
+  text-align: center; }
+
+@media (min-width: 360px) and (max-width: 740px) {
+  header {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column; }
+    header nav ul {
+      list-style: none;
+      max-width: 360px;
+      overflow: scroll; }
+      header nav ul li {
+        margin: 10px;
+        padding: 5px; }
+  main {
+    margin: 1rem;
+    padding: 2rem; }
+    main .texto-1 {
+      margin: 20px;
+      padding: 15px; }
+  .div-1 .img-1 {
+    margin: 20px;
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
+    width: 300px;
+    height: 250px; }
+  .footer-1 {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto); }
+    .footer-1 .img-2 {
+      grid-column: 1;
+      grid-row: 3; }
+  .card {
+    font-size: 20px;
+    margin: 20px; }
+    .card .img-3 {
+      width: 300px; }
+    .card .img-4 {
+      width: 300px; }
+    .card .img-5 {
+      width: 300px; }
+  main div .carousel-inner p {
+    font-size: 20px; }
+  main div .carousel-inner .img-8 {
+    width: 300px; }
+  main div .carousel-inner .img-9 {
+    width: 300px; }
+  main div .carousel-inner .img-10 {
+    width: 300px; }
+  .main-contactos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto); }
+    .main-contactos .img-6 {
+      grid-column: 1;
+      grid-row: 1;
+      padding: 10px;
+      width: 300px; }
+  footer div .ul-1 {
+    margin: 10px;
+    font-size: 20px; }
+  main .img-7 {
+    width: 250px;
+    padding: 10px; }
+  footer .p-1 {
+    margin: 15px; } }

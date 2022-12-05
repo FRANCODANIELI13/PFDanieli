@@ -1,0 +1,17 @@
+//condicionales
+
+
+@mixin condicion($color-principal) {
+    background-color: $color-principal;
+
+    //condicion
+
+    @if $color-principal = gray{
+        border: 1px solid black;
+        padding: 2rem;
+    }@else{
+        border: 2px solid whitesmoke;
+        padding: 3rem;
+    }
+    
+}

@@ -1,0 +1,323 @@
+//reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+//hojas secundarias
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "utilidades/condicionales";
+@import "utilidades/extende";
+
+body{
+    background-color: $color-principal;
+}
+
+
+// estilos del encabezado
+header{  
+    padding: 10px;
+    background-color: $color-secundario;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+        padding: 20px;
+        margin: 20px;
+        font-style: italic;  
+        font-size: 50px;  
+        color: whitesmoke
+    }
+    nav{
+        div{
+            ul{
+                display: flex;
+                margin: 30px;
+                padding: 40px;
+                list-style: none; 
+                gap: 50px;
+                li{
+                    background-color: $color-teciario;
+                    padding: 10px;
+                    border-radius: 40px;
+                    text-shadow:2px 1px 2px black;
+                    a{
+                        color: whitesmoke;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// estilo del main
+main{
+    @include medidas(200px,250px);
+    padding: 30px;
+    margin-left:  40px;
+    display: inline;
+    inline-size: 20px;
+    .texto-1{
+        margin: 15px;
+        padding: 15px;
+        font-style: italic;
+        font-size: 20px;
+        h2{
+            font-size: 35px;
+        }
+    }
+}
+.div-1{
+        @extend %estilosgrid;
+        .img-1{
+            grid-column: 2;
+            grid-row:  1;
+            width: 400PX;
+            height: 350px;
+            border-radius: 600px;
+        }
+}       
+.footer-1{
+        @extend %estilosgrid;
+        text-align: start;
+        p{
+            margin: 20px;
+            font-size: 20px;
+            color: rgba(90, 82, 82, 0.952);
+        }
+        .img-2{
+            grid-column: 3;
+            grid-row: 3;
+            height: 150px;
+            border-radius: 400px;        
+        }
+}
+
+// estilo de productos
+main{
+    h2{
+        margin: 20px;
+        padding: 30px;
+        display: grid;
+        place-content: center;
+        font-style: italic;
+        text-align: center;
+        font-size: 40px    
+    }
+    .card{
+        
+        text-align: center;
+        margin: 20px;
+        .img-3{
+            @include estloimagenes;
+        }
+        .img-4{
+            @include estloimagenes;
+        }
+        .img-5{
+            @include estloimagenes;
+        }
+        div{
+            p{
+                font-style: italic;
+                font-size: 30px;
+                text-align: center;
+            }
+        }
+    }
+}
+ //estilo promociones
+main{
+    div{
+        .carousel-inner{
+            margin: 5px;
+            font-style: italic;
+            font-size: 27px;
+            display: grid;
+            place-content: center;
+            div{
+                .img-8{
+                    @include estiloimagenes2;
+                }
+                .img-9{
+                    @include estiloimagenes2;
+                }
+                .img-10{
+                    @include estiloimagenes2;
+                }
+            }
+        }
+    }
+ }
+
+ //estilo de contactos
+.main-contactos{
+    @extend %estilosgrid;
+    .img-6{
+        padding: 0px;
+        grid-column: 43;
+        grid-row:  2;
+        padding: 20px;
+        width: 400px;
+        border-radius: 400px;
+        align-self: center;
+    }
+}
+
+footer{
+    div{
+        .ul-1{
+            list-style: none;
+            padding: 100px;
+            margin: 30px;
+            text-align: center;
+        }
+    }
+}
+
+ //estilo de nosotros
+
+.main-nosotros{
+   
+    .img-7{
+        
+        padding: 20px;
+        width: 300px;
+        border-radius: 500px;
+    }
+}
+
+footer{
+    .p-1{
+        font-style: italic;
+        padding: 30px;
+        margin: 20px;
+        text-align: center;
+    }
+}
+//mq
+@media (min-width:360px)and(max-width:740px){
+    header{
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        nav{
+            
+          ul{
+             list-style: none;
+             max-width: 360px;
+             overflow: scroll;
+                li{
+                    margin: 10px;
+                    padding: 5px;
+                 }
+            }
+            
+        }
+    }
+ // estilos de main
+    main{
+       margin: 1rem;
+       padding: 2rem;
+       .texto-1{
+         margin: 20px;
+         padding: 15px;
+        }
+    }
+    
+    
+    .div-1{
+        .img-1{
+            margin: 20px;
+            display: grid;
+            grid-column: 1;
+            grid-row: 2;
+            width: 300px;
+            height: 250px;
+        }
+    }
+    .footer-1{        
+       margin: 20px;
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-gap: 10px;
+       grid-auto-rows: minmax(100px, auto);
+        .img-2{
+            grid-column: 1;
+            grid-row: 3;
+        }
+    }
+ //estilos de productos
+    .card{
+      font-size: 20px;
+      margin: 20px;
+      .img-3{
+        width: 300px;
+      }
+      .img-4{  
+        width: 300px;
+      }
+      .img-5{
+        width: 300px;
+      }
+    }
+  //estilo de promociones
+    main{
+      div{
+        .carousel-inner{
+            p{
+                font-size: 20px;
+            }
+            .img-8{
+                width: 300px;
+            }
+            .img-9{
+                width: 300px;
+            }
+            .img-10{
+                width: 300px;
+            }
+        }
+      }
+    }
+ //estilo de contactos
+    .main-contactos{
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-gap: 10px;
+       grid-auto-rows: minmax(100px, auto);
+       .img-6{
+          grid-column: 1;
+          grid-row:  1;
+          padding: 10px;
+          width: 300px;
+        }
+    }
+  
+    footer{
+       div{
+          .ul-1{
+             margin: 10px;
+             font-size: 20px;
+            }
+        }
+    }
+ //estilo de nsosotros
+    main{
+      .img-7{
+         width: 250px;
+         padding: 10px;
+        }
+    }
+    footer{
+       .p-1{
+          margin: 15px;
+        }
+    }
+}
+ 
+
