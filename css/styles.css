@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box; }
 
-.div-1, .footer-1, .main-contactos {
+.div-1, .footer-1, .main-contactos, .main-nosotros {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
@@ -83,6 +83,8 @@ main h2 {
   font-size: 40px; }
 
 main .card {
+  display: flex;
+  justify-content: space-between;
   text-align: center;
   margin: 20px; }
   main .card .img-3 {
@@ -134,6 +136,8 @@ footer div .ul-1 {
   text-align: center; }
 
 .main-nosotros .img-7 {
+  grid-column: 50;
+  grid-row: 1;
   padding: 20px;
   width: 300px;
   border-radius: 500px; }
@@ -146,16 +150,23 @@ footer .p-1 {
 
 @media (min-width: 360px) and (max-width: 740px) {
   header {
+    padding: 10px;
     max-width: 360px;
     display: flex;
     flex-direction: column; }
-    header nav ul {
-      list-style: none;
-      max-width: 360px;
-      overflow: scroll; }
-      header nav ul li {
-        margin: 10px;
-        padding: 5px; }
+    header h1 {
+      font-size: 60px;
+      margin: 20px; }
+    header nav {
+      width: 360px; }
+      header nav ul {
+        list-style: none;
+        max-width: 360px;
+        overflow: scroll;
+        font-size: 20px; }
+        header nav ul li {
+          margin: 10px;
+          padding: 5px; }
   main {
     margin: 1rem;
     padding: 2rem; }
@@ -179,6 +190,8 @@ footer .p-1 {
       grid-column: 1;
       grid-row: 3; }
   .card {
+    display: flex;
+    flex-direction: column;
     font-size: 20px;
     margin: 20px; }
     .card .img-3 {
@@ -208,8 +221,103 @@ footer .p-1 {
   footer div .ul-1 {
     margin: 10px;
     font-size: 20px; }
-  main .img-7 {
-    width: 250px;
-    padding: 10px; }
+  .main-nosotros {
+    margin: 0px; }
+    .main-nosotros .img-7 {
+      width: 250px;
+      padding: 10px; }
   footer .p-1 {
     margin: 15px; } }
+
+@media (min-width: 720px) and (max-width: 1024px) {
+  header {
+    padding: 10px;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column; }
+    header h1 {
+      font-size: 60px;
+      margin: 20px; }
+    header nav {
+      width: 720px; }
+      header nav ul {
+        list-style: none;
+        max-width: 720px;
+        overflow: scroll;
+        font-size: 20px; }
+        header nav ul li {
+          margin: 10px;
+          padding: 5px; }
+  main {
+    margin: 1rem;
+    padding: 2rem; }
+    main .texto-1 {
+      margin: 20px;
+      padding: 15px; }
+  .div-1 .img-1 {
+    margin: 20px;
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    width: 500px;
+    height: 450px; }
+  .footer-1 {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto); }
+    .footer-1 p {
+      font-size: 25px;
+      font-style: italic; }
+    .footer-1 .img-2 {
+      height: 250px;
+      width: 300px;
+      grid-column: 3;
+      grid-row: 2; }
+  .card {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin: 20px; }
+    .card .img-3 {
+      width: 350px; }
+    .card .img-4 {
+      width: 350px; }
+    .card .img-5 {
+      width: 350px; }
+  main div .carousel-inner p {
+    font-size: 35px; }
+  main div .carousel-inner .img-8 {
+    width: 400px; }
+  main div .carousel-inner .img-9 {
+    width: 400px; }
+  main div .carousel-inner .img-10 {
+    width: 400px; }
+  .main-contactos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto); }
+    .main-contactos .img-6 {
+      grid-column: 15;
+      grid-row: 2;
+      padding: 10px;
+      width: 350px; }
+  footer div .ul-1 {
+    margin: 10px;
+    font-size: 35px; }
+  .main-nosotros {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto); }
+    .main-nosotros .img-7 {
+      grid-column: 17;
+      grid-row: 1;
+      width: 300px;
+      padding: 10px; }
+  footer .p-1 {
+    margin: 15px;
+    font-size: 25px; } }
